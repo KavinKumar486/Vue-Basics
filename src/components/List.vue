@@ -23,6 +23,6 @@
 </template>
 <script setup>
 const props = defineProps({
-  students: Array
+  
 })
 </script>
