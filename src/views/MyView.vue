@@ -18,30 +18,9 @@
         <input v-model.number="form.marks" type="number" required />
       </label>
       <br />
-      <button type="submit">Add Student</button>
+      
     </form>
   </div>
-  <div id="student-list">
-  <h2>Student List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Reg</th>
-        <th>Marks</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(student, index) in students" :key="index">
-        <td>{{ index + 1 }}</td>
-        <td>{{ student.name }}</td>
-        <td>{{ student.reg }}</td>
-        <td>{{ student.marks }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
   </div>
 </template>
 
@@ -148,7 +127,5 @@ export default {
 
 .form-container button:hover {
   background-color: #0097a7;
-
-
 }
 </style>
