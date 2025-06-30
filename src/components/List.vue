@@ -8,6 +8,7 @@
         <th>Name</th>
         <th>Reg</th>
         <th>Marks</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td>{{ student.name }}</td>
         <td>{{ student.reg }}</td>
         <td>{{ student.marks }}</td>
+        <td><input @click="$emit('deleteitem',student.reg)" type="Submit" value="Delete"></td>
       </tr>
     </tbody>
   </table>

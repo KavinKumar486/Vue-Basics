@@ -17,17 +17,18 @@
         Marks:
         <input v-model.number="form.marks" type="number" required />
       </label>
+      <button type="submit">Submit </button>
       <br />
     </form>
+
   </div>
   </div>
   <Listview 
   :students="students" 
+  v-on:deleteitem="deleteItem"
   />
 </template>
-
 <script>
-
 import Listview from '../components/List.vue'
 export default {
   data() {
@@ -41,14 +42,25 @@ export default {
     }
   },
   methods: {
-    addStudent() {
-      this.students.push({ ...this.form })
-      this.form.name = ''
-      this.form.reg = ''
-      this.form.marks = null
-    },
+  addStudent() {
+    this.students.push({ ...this.form })
+    this.form.name = ''
+    this.form.reg = ''
+    this.form.marks = null
   },
-}
+  deleteItem(reg) {
+    const pos = this.students.findIndex(s => s.reg === reg)
+    if (pos === -1) {
+      console.log('No Student found')
+    } else {
+      this.students.splice(pos, 1)
+    }
+  }
+},
+  components:{
+    Listview,
+  },
+  }
 </script>
 
 <style lang="css">
