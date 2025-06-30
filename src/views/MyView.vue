@@ -18,13 +18,17 @@
         <input v-model.number="form.marks" type="number" required />
       </label>
       <br />
-      
     </form>
   </div>
   </div>
+  <Listview 
+  :students="students" 
+  />
 </template>
 
 <script>
+
+import Listview from '../components/List.vue'
 export default {
   data() {
     return {

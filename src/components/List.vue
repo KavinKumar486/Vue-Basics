@@ -4,7 +4,7 @@
   <table>
     <thead>
       <tr>
-        <th>#</th>
+        <th>No</th>
         <th>Name</th>
         <th>Reg</th>
         <th>Marks</th>
@@ -23,6 +23,10 @@
 </template>
 <script setup>
 const props = defineProps({
+  students:{
+    type:Array,
+    required:true
+  }
   
 })
 </script>
